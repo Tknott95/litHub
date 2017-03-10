@@ -7,13 +7,14 @@
 
       <div class="right">
         <%= link "Edit", to: topic_path(@conn, :edit, topic) %>
+        <%= link "Delete", to: topic_path(@conn, :delete, topic), method: :delete %>
       </div>
     </li>
   <% end %>
 </ul>
 
-<div class="fixed-action-btn">
-  <%= link to: topic_path(@conn, :new), class: "btn-floating btn-large waves-effect waves-light black" do %>
-  <i class="material-icons">add</i>
+<div>
+  <%= link to: topic_path(@conn, :new), class: "btn waves-effect waves-light black" do %>
+  <i class="material-icons">Add New Language</i>
   <% end %>
 </div>

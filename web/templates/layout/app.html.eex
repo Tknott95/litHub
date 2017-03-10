@@ -14,7 +14,7 @@
 
   <body>
 
-    <nav class="light-green">
+    <nav class="black">
       <div class="nav-wrapper container">
         <a href="/" class="brand-logo">LitHub Admin Board</a>
       </div>
