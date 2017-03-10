@@ -26,6 +26,13 @@ defmodule LitHub.Router do
    resources "/topics", TopicController
   end
 
+  scope "/auth", LitHub do
+    pipe_through :browser 
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
   # Other scopes may use custom stacks.
   scope "/api", LitHub do
     pipe_through :api
