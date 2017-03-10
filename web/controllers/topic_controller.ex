@@ -9,6 +9,12 @@ defmodule LitHub.TopicController do
     render conn, "index.html", topics: topics
   end
 
+  def jsonIndex(conn, _params) do
+    topics = Repo.all(Topic)
+
+    json conn, topics
+  end
+
   def new(conn, _params) do
     changeset = Topic.changeset(%Topic{}, %{})
 
