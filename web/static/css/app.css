@@ -1,0 +1,7 @@
+/* This file is for your main application css. */
+
+.help-block {
+    color: red;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
