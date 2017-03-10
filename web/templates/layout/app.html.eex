@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello LitHub!</title>
+    <title>TrevHub</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   </head>
@@ -16,7 +16,7 @@
 
     <nav class="black">
       <div class="nav-wrapper container">
-        <a href="/" class="brand-logo">LitHub Admin Board</a>
+        <a href="/" class="brand-logo">TrevHub Admin Board</a>
       </div>
     </nav>
 
