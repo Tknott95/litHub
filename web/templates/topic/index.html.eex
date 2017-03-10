@@ -14,7 +14,11 @@
 </ul>
 
 <div>
+  <%= link to: "/api/languages",class: "btn waves-effect waves-light black" do %>
+    <i class="material-icons">JSON View of Languages</i>
+  <% end %>
+
   <%= link to: topic_path(@conn, :new), class: "btn waves-effect waves-light black" do %>
-  <i class="material-icons">Add New Language</i>
+    <i class="material-icons">Add New Language</i>
   <% end %>
 </div>
