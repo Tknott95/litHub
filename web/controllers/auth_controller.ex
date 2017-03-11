@@ -2,12 +2,7 @@ defmodule LitHub.AuthController do
   use LitHub.Web, :controller
   plug Ueberauth
 
-  def callback(conn, params) do
-    IO.puts "++++"
-    IO.inspect(conn.assigns)
-    IO.puts "++++"
-    IO.inspect(params)
-    IO.puts "++++"
+  def callback(%{assigns: %{ueberauth_auth: auth}} = conn, params) do
+    IO.inspect(auth);
   end
-
 end
