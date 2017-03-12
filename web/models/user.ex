@@ -1,5 +1,5 @@
 defmodule LitHub.User do
-  use Discuss.Web, :model
+  use LitHub.Web, :model
 
   schema "users" do
     field :email, :string
