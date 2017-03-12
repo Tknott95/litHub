@@ -6,21 +6,19 @@
 <div class="row marketing">
   <div class="col-lg-6">
     <h4>Admin Boards</h4>
-    <ul>
-      <li>
-        <a href="/topics">Languages Admin Board</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+
+    <div class="collection">
+        <a href="/topics"class="collection-item">Languages Admin Board</a>
+        <a href="https://hexdocs.pm/phoenix"  class="collection-item">Docs</a>
+        <a href="https://github.com/phoenixframework/phoenix" class="collection-item">Source</a>
+    </div> 
   </div>
 
+  <br>
+  <br>
+
   <div class="col-lg-6">
-    <h4>Help</h4>
+    <h6>Phoenix Basic Help</h6>
     <ul>
       <li>
         <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>

@@ -16,7 +16,16 @@
 
     <nav class="black">
       <div class="nav-wrapper container">
-        <a href="/" class="brand-logo">TrevHub Admin Board</a>
+        <a href="/" class="brand-logo left">TrevHub Admin Board</a>
+        <ul class="right">
+          <%= if @conn.assigns[:user] do %>
+            <li>Logout</li>
+          <% else %>
+            <li>
+              <%= link "Sign in w/ Github", to: auth_path(@conn, :request, "github") %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </nav>
 
