@@ -11,6 +11,12 @@ defmodule LitHub.TopicController do
     :delete
   ]
 
+  plug :check_topic_owner when action in [
+    :update,
+    :edit,
+    :delete
+  ]
+
   def index(conn, _params) do
     IO.inspect(conn.assigns)
     topics = Repo.all(Topic)
@@ -75,5 +81,19 @@ defmodule LitHub.TopicController do
     conn
     |> put_flash(:info, "Language Deleted")
     |> redirect(to: topic_path(conn, :index))
+  end
+
+  def check_topic_owner(conn, _params) do # whenever you try to delete update or destrpy the id is passed in url
+    %{params: %{"id" => topic_id}} = conn
+
+    # @TODO - ADD ADMIN FUNCTIONALITY HERE
+    if Repo.get(Topic, topic_id).user_id == conn.assigns.user.id do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You don't have access!")
+      |> redirect(to: topic_path(conn, :index))
+      |> halt()
+    end
   end
 end
