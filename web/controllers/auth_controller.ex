@@ -11,6 +11,12 @@ defmodule LitHub.AuthController do
    signin(conn, changeset)
   end
 
+  def signout(conn, _params) do
+    conn
+    |> configure_session(drop: true) # deletes entire session
+    |> redirect(to: topic_path(conn, :index))
+  end
+
   defp signin(conn, changeset) do
     case insert_or_update_user(changeset) do
       {:ok, user} ->

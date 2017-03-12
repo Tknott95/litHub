@@ -7,7 +7,7 @@ defmodule LitHub.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug LitHub.Plugs.SetUser # module plug others are function plugs
+    plug LitHub.Plugs.SetUser # module plug - others are function plugs
   end
 
   pipeline :api do
@@ -28,8 +28,9 @@ defmodule LitHub.Router do
   end
 
   scope "/auth", LitHub do
-    pipe_through :browser 
+    pipe_through :browser
 
+    get "/signout", AuthController, :signout # Conventions should be delete session but..... (this is basic way less painfull K.I.S.S. way)
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
   end

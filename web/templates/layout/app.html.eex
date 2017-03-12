@@ -19,10 +19,12 @@
         <a href="/" class="brand-logo left">TrevHub Admin Board</a>
         <ul class="right">
           <%= if @conn.assigns[:user] do %>
-            <li>Logout</li>
+            <li>
+              <%= link "Logout", class: "waves-effect waves-light btn grey", to: auth_path(@conn, :signout) %>
+            </li>
           <% else %>
             <li>
-              <%= link "Sign in w/ Github", to: auth_path(@conn, :request, "github") %>
+              <%= link "Sign in w/ Github", class: "waves-effect waves-light btn grey", to: auth_path(@conn, :request, "github") %>
             </li>
           <% end %>
         </ul>

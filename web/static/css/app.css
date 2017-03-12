@@ -9,3 +9,9 @@
 .alert-info {
     margin-top: 30px;
 }
+
+.tk-pg-cont-helper {
+ background-color: black;
+ color: lightgray;
+ opacity: 0.4;
+}

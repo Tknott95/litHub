@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" style="background-image: 'http://unifoundconsultants.com/wp-content/uploads/2016/03/home-about.jpg'">
   <h2><%= gettext "Welcome to %{name}", name: "Trevor Knott's Custom Admin Board" %></h2>
   <p class="lead">A productive backend Admin Board<br /> That gives efficent speed and maintainability for functionality of the full app.</p>
 </div>
@@ -17,7 +17,7 @@
   <br>
   <br>
 
-  <div class="col-lg-6">
+  <div class="col-lg-6 tk-pg-cont-helper">
     <h6>Phoenix Basic Help</h6>
     <ul>
       <li>
