@@ -19,7 +19,8 @@ defmodule LitHub.TopicController do
   end
 
   def jsonIndex(conn, _params) do
-    topics = Repo.all(Topic)
+    topics = from(t in Topic, select: %{id: t.id, title: t.title})
+      |> Repo.all
 
     json conn, topics
   end
