@@ -3,6 +3,7 @@ defmodule LitHub.Topic do
 
   schema "topics" do
     field :title, :string
+    belongs_to :user, LitHub.User
   end
 
   def changeset(struct, params \\ %{}) do
