@@ -3,6 +3,14 @@ defmodule LitHub.TopicController do
 
   alias LitHub.Topic
 
+  plug LitHub.Plugs.RequireAuth when action in [
+    :new,
+    :create,
+    :edit,
+    :update,
+    :delete
+  ]
+
   def index(conn, _params) do
     IO.inspect(conn.assigns)
     topics = Repo.all(Topic)

@@ -17,7 +17,7 @@ defmodule LitHub.Router do
   scope "/", LitHub do
     pipe_through :browser # Use the default browser stack
 
-   get "/", PageController, :index
+   get "/", PageController, :index # Controller for basic pages (Landing, About, Etc) - Remember Admin API app
 
    # get "/topics/new", TopicController, :new
    # post "/topics", TopicController, :create

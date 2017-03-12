@@ -6,6 +6,7 @@ defmodule LitHub.Plugs.SetUser do
   alias LitHub.User
 
   def init(_params) do
+    # required to define even if not used
   end
   
   def call(conn, _params) do
