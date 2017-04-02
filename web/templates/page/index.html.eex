@@ -4,7 +4,7 @@
 </div>
 
 <div class="row marketing">
-  <div class="col-lg-6">
+  <div class="col-xs-12">
     <h4>Admin Boards</h4>
     <div class="collection">
         <a href="/topics"class="collection-item">Languages Admin Board</a>
@@ -12,11 +12,12 @@
         <a href="https://github.com/phoenixframework/phoenix" target="_blank" class="collection-item">Source</a>
     </div>
   </div>
+</div>
 
-  <br>
-  <br>
+<br>
+<br>
 
-  <div class="col-lg-6 tk-pg-cont-helper">
+<div class="col-xs-12 tk-pg-cont-helper">
     <h6>Phoenix Basic Help</h6>
     <ul>
       <li>
@@ -29,5 +30,4 @@
         <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
       </li>
     </ul>
-  </div>
 </div>
