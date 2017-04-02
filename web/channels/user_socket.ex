@@ -4,8 +4,9 @@ defmodule LitHub.UserSocket do
   ## Channels
   # channel "room:*", LitHub.RoomChannel
 
-  ## Transports
-  transport :websocket, Phoenix.Transports.WebSocket
+   ## Transports
+  transport :websocket, Phoenix.Transports.WebSocket,
+    timeout: 45_000
   # transport :longpoll, Phoenix.Transports.LongPoll
 
   # Socket params are passed from the client and can
@@ -22,7 +23,6 @@ defmodule LitHub.UserSocket do
   def connect(_params, socket) do
     {:ok, socket}
   end
-
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #
   #     def id(socket), do: "users_socket:#{socket.assigns.user_id}"
