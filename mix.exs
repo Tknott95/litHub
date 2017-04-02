@@ -10,7 +10,7 @@ defmodule LitHub.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      aliases: aliases(),
-     deps: deps()],
+     deps: deps(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod]
   end
