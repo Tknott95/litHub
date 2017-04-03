@@ -7,7 +7,7 @@ defmodule LitHub.BlogController do
     IO.inspect(conn.assigns)
     topics = Repo.all(Blog)
 
-    render conn, "index.html", topics: topics
+    render conn, "index.html", blog_posts: blog_posts
   end
 
   def new(conn, _params) do
@@ -21,14 +21,14 @@ defmodule LitHub.BlogController do
     # changeset = Topic.changeset(%Topic{}, topic)
 
     changeset = conn.assigns.user
-      |> build_assoc(:topics)   # looks into users model ands sees has_many
-      |> Blog.changeset(topic)
+      |> build_assoc(:blog_posts)   # looks into users model ands sees has_many
+      |> Blog.changeset(blog_post)
 
     case Repo.insert(changeset) do
-      {:ok, _topic} -> 
+      {:ok, _blog_post} -> 
         conn
         |> put_flash(:info, "Blog Post Created")
-        |> redirect(to: topic_path(conn, :index))
+        |> redirect(to: blog_path(conn, :index))
       {:error, changeset} -> 
         render conn, "new.html", changeset: changeset
     end

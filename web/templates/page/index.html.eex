@@ -8,7 +8,7 @@
     <h4>Admin Boards</h4>
     <div class="collection">
         <a href="/topics"class="collection-item">Languages Admin Board</a>
-        <a href="https://hexdocs.pm/phoenix"  target="_blank" class="collection-item">Docs</a>
+        <a href="/blog_posts/index" class="collection-item">Blog Admin Board</a>
         <a href="https://github.com/phoenixframework/phoenix" target="_blank" class="collection-item">Source</a>
     </div>
   </div>
@@ -28,6 +28,9 @@
       </li>
       <li>
         <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
+      </li>
+      <li>
+        <a href="https://hexdocs.pm/phoenix"  target="_blank" class="collection-item">Docs</a>
       </li>
     </ul>
 </div>
