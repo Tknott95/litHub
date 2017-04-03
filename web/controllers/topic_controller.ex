@@ -31,6 +31,11 @@ defmodule LitHub.TopicController do
     json conn, topics
   end
 
+  def show(conn, %{"id" => topic_id}) do
+    topic = Repo.get!(Topic, topic_id)
+    render conn, "show.html", topic: topic
+  end
+
   #def show (conn, %{"id" => topic_id}) do
   #  topic = Repo.get!(Topic, topic_id)
    # render conn, "show.html", topic: topic
