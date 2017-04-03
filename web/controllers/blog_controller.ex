@@ -5,9 +5,9 @@ defmodule LitHub.BlogController do
 
    def index(conn, _params) do
     IO.inspect(conn.assigns)
-    topics = Repo.all(Blog)
+    blog_posts = Repo.all(Blog)
 
-    render conn, "index.html", blog_post: blog_post
+    render conn, "index.html", blog_posts: blog_posts
   end
 
   def new(conn, _params) do
@@ -18,8 +18,6 @@ defmodule LitHub.BlogController do
   end
 
    def create(conn, %{"blog_post" => blog_post}) do
-    # changeset = Topic.changeset(%Topic{}, topic)
-
     changeset = conn.assigns.user
       |> build_assoc(:blog_posts)   # looks into users model ands sees has_many
       |> Blog.changeset(blog_post)

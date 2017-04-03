@@ -1,9 +1,9 @@
 <h2>Blog Posts</h2>
 
 <ul class="collection">
-  <%= for topic <- @topics do %>
+  <%= for blog_post <- @blog_posts do %>
     <li class="collection-item">
-      <%= link topic.title, to: topic_path(@conn, :show, topic) %> 
+      <%= link blog_post.title, to: blog_path(@conn, :show, blog_post) %> 
     </li>
   <% end %>
 </ul>
