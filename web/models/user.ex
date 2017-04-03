@@ -6,6 +6,8 @@ defmodule LitHub.User do
     field :provider, :string
     field :token, :string
     has_many :topics, LitHub.Topic
+    has_many :comments, LitHub.Comment
+    has_many :blog_posts, LitHub.BlogPost
 
     timestamps()
   end

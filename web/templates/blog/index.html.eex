@@ -1,0 +1,10 @@
+<h2>Blog Posts</h2>
+
+<ul class="collection">
+  <%= for topic <- @topics do %>
+    <li class="collection-item">
+      <%= link topic.title, to: topic_path(@conn, :show, topic) %> 
+    </li>
+  <% end %>
+</ul>
+

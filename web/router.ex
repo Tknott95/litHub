@@ -24,7 +24,12 @@ defmodule LitHub.Router do
    # get "/topics/:id/edit", TopicController, :edit
    # put "/topics/:id", TopicController, :update
 
+   get "/blog_posts/new", BlogController, :new
+   post "/blog_posts", BlogController, :create
+   get "/blog_posts/index", BlogController, :index
+
    resources "/topics", TopicController
+  #  resources "/blog", BlogController
   end
 
   scope "/auth", LitHub do
