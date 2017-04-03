@@ -26,7 +26,7 @@ defmodule LitHub.Router do
 
    get "/blog_posts/new", BlogController, :new
    post "/blog_posts", BlogController, :create
-   get "/blog_posts/index", BlogController, :index
+   get "/blog_posts", BlogController, :index
 
    resources "/topics", TopicController
   #  resources "/blog", BlogController

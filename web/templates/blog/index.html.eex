@@ -8,3 +8,6 @@
   <% end %>
 </ul>
 
+<%= link to: blog_path(@conn, :new), class: "btn waves-effect waves-light black" do %>
+    <i class="material-icons">Add New Blog Post</i>
+<% end %>
