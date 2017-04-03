@@ -7,7 +7,7 @@ defmodule LitHub.BlogController do
     IO.inspect(conn.assigns)
     topics = Repo.all(Blog)
 
-    render conn, "index.html", blog_posts: blog_posts
+    render conn, "index.html", blog_post: blog_post
   end
 
   def new(conn, _params) do
@@ -17,7 +17,7 @@ defmodule LitHub.BlogController do
     render conn, "new.html", changeset: changeset
   end
 
-   def create(conn, %{"topic" => topic}) do
+   def create(conn, %{"blog_post" => blog_pos}) do
     # changeset = Topic.changeset(%Topic{}, topic)
 
     changeset = conn.assigns.user
