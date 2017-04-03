@@ -17,7 +17,7 @@ defmodule LitHub.BlogController do
     render conn, "new.html", changeset: changeset
   end
 
-   def create(conn, %{"blog_post" => blog_pos}) do
+   def create(conn, %{"blog_post" => blog_post}) do
     # changeset = Topic.changeset(%Topic{}, topic)
 
     changeset = conn.assigns.user
