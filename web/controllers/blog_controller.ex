@@ -17,10 +17,10 @@ defmodule LitHub.BlogController do
     render conn, "new.html", changeset: changeset
   end
 
-   def create(conn, _params) do  # %{"title" => title,"author" => author, "category" => category, "content" => content]
+   def create(conn, %{"Blog" => %{}}) do 
     changeset = conn.assigns.user
       |> build_assoc(:blog_posts)   # looks into users model ands sees has_many
-      |> Blog.changeset(_params)
+      |> Blog.changeset(Blog)
 
     case Repo.insert(changeset) do
       {:ok, _blog_post} -> 

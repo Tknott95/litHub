@@ -1,6 +1,8 @@
 defmodule LitHub.Endpoint do
   use Phoenix.Endpoint, otp_app: :litHub
 
+  plug CORSPlug
+
   socket "/socket", LitHub.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.

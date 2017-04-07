@@ -1,1 +1,2 @@
-<%= @topic.title %>
+
+<h3><%= @topic.title %></h1>
