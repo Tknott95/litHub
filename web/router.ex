@@ -11,7 +11,7 @@ defmodule LitHub.Router do
   end
 
   pipeline :api do
-    plug CORSPlug, origin: ["*", "https://tknott95.github.io//ng-frontfolio/"]
+    plug CORSPlug, origin: ["http://localhost:4200"]
     plug :accepts, ["json"]
   end
 
