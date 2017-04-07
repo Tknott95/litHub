@@ -1,0 +1,38 @@
+<h2>Show post</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </li>
+
+  <li>
+    <strong>Category:</strong>
+    <%= @post.category %>
+  </li>
+
+  <li>
+    <strong>Content:</strong>
+    <%= @post.content %>
+  </li>
+
+  <li>
+    <strong>Author:</strong>
+    <%= @post.author %>
+  </li>
+
+  <li>
+    <strong>Date published:</strong>
+    <%= @post.date_published %>
+  </li>
+
+  <li>
+    <strong>Published:</strong>
+    <%= @post.published %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: post_path(@conn, :edit, @post) %>
+<%= link "Back", to: post_path(@conn, :index) %>

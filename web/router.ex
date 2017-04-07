@@ -16,7 +16,7 @@ defmodule LitHub.Router do
   end
 
   scope "/", LitHub do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser # Use the default browser stacks
 
    get "/", PageController, :index # Controller for basic pages (Landing, About, Etc) - Remember Admin API app
 
@@ -30,7 +30,7 @@ defmodule LitHub.Router do
    get "/blog_posts", BlogController, :index
 
    resources "/topics", TopicController
-  #  resources "/blog", BlogController
+   resources "/posts", PostController
   end
 
   scope "/auth", LitHub do
@@ -46,5 +46,6 @@ defmodule LitHub.Router do
     pipe_through :api
 
     get "/languages", TopicController, :jsonIndex
+    get "/posts", PostController, :jsonIndex
   end
 end
