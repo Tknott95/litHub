@@ -11,7 +11,8 @@ defmodule LitHub.Router do
   end
 
   pipeline :api do
-    plug CORSPlug, origin: ["http://localhost:4200"]
+    plug CORSPlug
+    # plug CORSPlug, origin: ["http://localhost:4200"]
     plug :accepts, ["json"]
   end
 
