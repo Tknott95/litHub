@@ -3,6 +3,20 @@ defmodule LitHub.PostController do
 
   alias LitHub.Post
 
+   plug LitHub.Plugs.RequireAuth when action in [
+    :new,
+    :create,
+    :edit,
+    :update,
+    :delete
+  ]
+
+  # plug :check_topic_owner when action in [
+  #   :update,
+  #   :edit,
+  #   :delete
+  # ]
+
   def index(conn, _params) do
     posts = Repo.all(Post)
     render(conn, "index.html", posts: posts)
@@ -68,4 +82,17 @@ defmodule LitHub.PostController do
     |> put_flash(:info, "Post deleted successfully.")
     |> redirect(to: post_path(conn, :index))
   end
+
+  # def check_topic_owner(conn, _params) do # whenever you try to delete update or destrpy the id is passed in url
+  #   %{params: %{"id" => post_id}} = conn
+
+  #   # @TODO - ADD ADMIN FUNCTIONALITY HERE
+  #   if Repo.get(Topic, post_id).user_id == conn.assigns.user.id do
+  #     conn
+  #   else
+  #     conn
+  #     |> put_flash(:error, "You don't have access!")
+  #     |> redirect(to: post_path(conn, :index))
+  #     |> halt()
+  #   end
 end
