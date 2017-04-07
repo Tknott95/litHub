@@ -33,4 +33,8 @@
   </tbody>
 </table>
 
+<%= link to: "/api/posts",class: "btn waves-effect waves-light black" do %>
+    <i class="material-icons">JSON View of Blog Posts</i>
+<% end %>
+
 <%= link "New post", to: post_path(@conn, :new) %>
