@@ -40,6 +40,6 @@
     <i class="material-icons">JSON View of Blog Posts</i>
 <% end %>
 
-<%= link to: "/posts", class: "btn waves-effect waves-light black" do %>
-    <i class="material-icons">New Blog Posts</i>
+<%= link to: "/posts/new", class: "btn waves-effect waves-light black" do %>
+    <i class="material-icons">New Blog Post</i>
 <% end %>
