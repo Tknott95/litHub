@@ -1,6 +1,7 @@
 <h2>Listing posts</h2>
 
-<table class="table">
+<div class="jumbotron">
+  <table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -33,6 +34,7 @@
 <% end %>
   </tbody>
 </table>
+</div>
 
 <%= link to: "/api/posts", class: "btn waves-effect waves-light black" do %>
     <i class="material-icons">JSON View of Blog Posts</i>
