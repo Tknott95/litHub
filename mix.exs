@@ -37,7 +37,7 @@ defmodule LitHub.Mixfile do
   def application do
     [mod: {LitHub, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :ueberauth, :ueberauth_github]]
+                    :phoenix_ecto, :postgrex, :ueberauth, :ueberauth_github, :bamboo, :bamboo_smtp]]
   end
 
   # Specifies which paths to compile per environment.
@@ -58,7 +58,9 @@ defmodule LitHub.Mixfile do
      {:cowboy, "~> 1.0"},
      {:cors_plug, "~> 1.2"},
      {:ueberauth, "~> 0.3"},
-     {:ueberauth_github, "~> 0.4"}]
+     {:ueberauth_github, "~> 0.4"},
+     {:bamboo, "~> 0.7"},
+     {:bamboo_smtp, "~> 1.2.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

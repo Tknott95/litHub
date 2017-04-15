@@ -34,3 +34,16 @@ config :ueberauth, Ueberauth,
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_id: "b22f9cc64c3711c492f1",
   client_secret: "f5065a7d6aa9977aef3406e5673dc02b4a16f59f"
+
+# In your config/config.exs file
+config :litHub, LitHub.Mailer,
+  adapter: Bamboo.SMTPAdapter,
+  api_key: "",
+  server: "smtp.sendgrid.net",
+  port: 587,
+  username: "apikey",
+  password: "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",
+  tls: :if_available, # can be `:always` or `:never`
+  ssl: false, # can be `true`
+  retries: 1
+ 

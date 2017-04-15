@@ -26,6 +26,7 @@ defmodule LitHub.BlogController do
       {:ok, _blog_post} -> 
         conn
         |> put_flash(:info, "Blog Post Created")
+        |> MyApp.Email.welcome_text_email("tknott95@hotmail.com") |> Mailer.deliver_now
         |> redirect(to: blog_path(conn, :index))
       {:error, changeset} -> 
         render conn, "new.html", changeset: changeset
